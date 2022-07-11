@@ -6,6 +6,9 @@ import FeatureIcon1 from "../assets/feature/beautiful.png";
 import FeatureIcon2 from "../assets/feature/easy-to-use.png";
 import FeatureIcon3 from "../assets/feature/open-source.png";
 import FeatureEffect from "../assets/feature/effect.png";
+import {getIcon} from "../../api/icons";
+
+let airplane = getIcon("paypal")
 
 function Logo() {
   return (
@@ -51,7 +54,6 @@ function Logo() {
     </svg>
   );
 }
-
 function Feature() {
   let list = [
     {
@@ -91,6 +93,8 @@ function Feature() {
     </div>
   );
 }
+
+console.log(airplane);
 
 export default function Welcome() {
   return (

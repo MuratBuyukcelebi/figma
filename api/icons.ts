@@ -1,4 +1,26 @@
-export default {
+interface IconList {
+  [key: string]: Icon
+}
+interface Icon {
+  label: string,
+  unicode: string,
+  changes: Array<any>,
+  search: Array<any>,
+  styles: Array<any>,
+  last_modified: number
+  svgs: {
+    [key: string]: Styles,
+  },
+}
+
+interface Styles {
+  raw: string,
+  viewBox: Array<any>,
+  width: string,
+  height: string,
+  path: string
+}
+const icons: IconList = {
   "airplane": {
     "label": "Airplane",
     "unicode": "e10b",
@@ -2984,3 +3006,9 @@ export default {
     }
   }
 }
+
+export function getIcon(key: string): any {
+  return icons[key]
+}
+
+export default icons
